@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class HeroSection extends StatelessWidget {
   final String? imageUrl;
-
   const HeroSection({super.key, this.imageUrl});
 
   @override
@@ -27,7 +26,6 @@ class HeroSection extends StatelessWidget {
                 : _emptyBackground(),
           ),
 
-          // Dark gradient
           Positioned.fill(
             child: Container(
               decoration: BoxDecoration(

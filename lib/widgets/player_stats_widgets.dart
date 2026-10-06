@@ -7,18 +7,39 @@ class PlayerTableHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xfff1f2f5),
-      padding: const EdgeInsets.symmetric(
-        horizontal: 8,
-        vertical: 10,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
       child: const Row(
         children: [
-          Expanded(flex: 1, child: Text("Rank", style: TextStyle(fontWeight: FontWeight.bold))),
-          Expanded(flex: 2, child: Text("Player", style: TextStyle(fontWeight: FontWeight.bold))),
-          Expanded(flex: 2, child: Text("Team", style: TextStyle(fontWeight: FontWeight.bold))),
-          Expanded(flex: 2, child: Text("Position", style: TextStyle(fontWeight: FontWeight.bold))),
-          Expanded(flex: 1, child: Text("Goals", style: TextStyle(fontWeight: FontWeight.bold))),
-          Expanded(flex: 1, child: Text("App", style: TextStyle(fontWeight: FontWeight.bold))),
+          Expanded(
+            flex: 1,
+            child: Text("Rank", style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+          Expanded(
+            flex: 2,
+            child: Text(
+              "Player",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Text("Team", style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+          Expanded(
+            flex: 2,
+            child: Text(
+              "Position",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Text("Goals", style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+          Expanded(
+            flex: 1,
+            child: Text("App", style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
         ],
       ),
     );
@@ -50,16 +71,9 @@ class PlayerRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 8,
-        vertical: 10,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
       decoration: const BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: Color(0xffdddddd),
-          ),
-        ),
+        border: Border(bottom: BorderSide(color: Color(0xffdddddd))),
       ),
       child: Row(
         children: [
@@ -76,16 +90,10 @@ class PlayerRow extends StatelessWidget {
                           playerImage,
                           fit: BoxFit.cover,
                           errorBuilder: (context, error, stackTrace) {
-                            return const Icon(
-                              Icons.person,
-                              size: 20,
-                            );
+                            return const Icon(Icons.person, size: 20);
                           },
                         )
-                      : const Icon(
-                          Icons.person,
-                          size: 20,
-                        ),
+                      : const Icon(Icons.person, size: 20),
                 ),
                 const SizedBox(width: 5),
                 Expanded(
@@ -93,9 +101,7 @@ class PlayerRow extends StatelessWidget {
                     playerName,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontSize: 11,
-                    ),
+                    style: const TextStyle(fontSize: 11),
                   ),
                 ),
               ],

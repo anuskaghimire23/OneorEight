@@ -19,7 +19,6 @@ class AllPlayerStats extends GetView<HomeController> {
         return SingleChildScrollView(
           child: Column(
             children: [
-              // Black heading - same as League Standings
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(22),
@@ -68,7 +67,7 @@ class AllPlayerStats extends GetView<HomeController> {
                 String teamName = stat.team?.teamName ?? "-";
                 String teamLogo = stat.team?.teamLogo ?? "";
 
-                // Get team information from points table
+                // Get team information from pointstable
                 if (stat.player != null) {
                   final teamId = controller.playerTeamIdMap[stat.player!.id];
 

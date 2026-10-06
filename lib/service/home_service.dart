@@ -15,7 +15,10 @@ class HomeService {
   }
 
   static Future<Response> getPointsTable() async {
-    return await DioConnector.dio.get("points-table");
+    return await DioConnector.dio.get(
+      "points_table",
+      queryParameters: {"season_id": 1},
+    );
   }
 
   static Future<Response> getPlayersWithStats() async {
@@ -26,7 +29,7 @@ class HomeService {
   }
 
   static Future<Response> getSponsors() async {
-    return await DioConnector.dio.get("sponsor");
+    return await DioConnector.dio.get("sponsors");
   }
 
   static Future<Response> getTeams() async {
